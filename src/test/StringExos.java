@@ -5,6 +5,7 @@ public class StringExos {
 		String s = "Hello";
 		
 		write(s);
+		inverseString(s);
 		
 		
 	}
@@ -12,10 +13,12 @@ public class StringExos {
 		System.out.println(s);
 		return s;
 	}
-	public static String inverseString(String stringToInverse) {
-		char string = String[stringToInverse.length];
-		for(char c : stringToInverse.toCharArray()) {			
-			
+	public static void inverseString(String stringToInverse) {
+		char[] string = stringToInverse.toCharArray();
+		String convertedString = ""; 
+		for(int i=string.length-1; i>=0; i--) {
+			 convertedString += string[i];
 		}
+		System.out.println( convertedString );
 	}
 }
